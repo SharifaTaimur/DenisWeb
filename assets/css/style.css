@@ -147,7 +147,9 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  padding: 0 !important;
+  margin: 0;
+  max-height: 60px;
 }
 
 @media (max-width: 992px) {
@@ -1795,4 +1797,38 @@ h3::after {
   background: #ff4a17;
   bottom: 0;
   left: calc(50% - 20px);
+}
+
+
+/* Show more css */
+#module {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+#module #collapseExample.collapse:not(.show) {
+  display: block;
+  height: 3rem;
+  overflow: hidden;
+}
+
+#module #collapseExample.collapsing {
+  height: 3rem;
+}
+
+#module a.collapsed::after {
+  content: '+ Show More';
+}
+
+#module a:not(.collapsed)::after {
+  content: '- Show Less';
+}
+
+
+/* green button */
+
+.centerB {
+  background-color: #ff4a17;
+  color: white;
 }
